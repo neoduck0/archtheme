@@ -52,3 +52,7 @@ if pacman -Q flatpak &> /dev/null; then
     flatpak override --user --env GTK_THEME=$theme
     flatpak override --user --env ICON_THEME=$icon_theme
 fi
+
+if [ -d ~/.var/app/dev.vencord.Vesktop/config/vesktop/themes/ ]; then
+    curl https://raw.githubusercontent.com/refact0r/midnight-discord/refs/heads/master/themes/flavors/midnight-tokyo-night.theme.css -o ~/.var/app/dev.vencord.Vesktop/config/vesktop/themes/midnight-tokyo-night.theme.css
+fi

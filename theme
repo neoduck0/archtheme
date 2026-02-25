@@ -11,9 +11,6 @@ gtk3_dir=~/.config/gtk-3.0/
 gtk4_dir=~/.config/gtk-4.0/
 theme_dir=~/.themes/"$theme"
 
-# remove the previous theme
-rm $gtk4_dir/*
-
 # add or overwrite with new theme
 gsettings set org.gnome.desktop.wm.preferences button-layout ''
 gsettings set org.gnome.desktop.interface gtk-theme "$theme"

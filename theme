@@ -27,8 +27,7 @@ fi
 echo "[Settings]
 gtk-theme-name = $theme
 gtk-icon-theme-name = $icon_theme
-gtk-font-name = $font" > $gtk3_dir/settings.ini
-
+gtk-font-name = $font" >$gtk3_dir/settings.ini
 
 # GTK 4
 if [ ! -d $gtk4_dir ]; then
@@ -38,9 +37,8 @@ ln -sf "$theme_dir"/gtk-4.0/gtk.css "$gtk4_dir"/gtk.css
 ln -sf "$theme_dir"/gtk-4.0/gtk-dark.css "$gtk4_dir"/gtk-dark.css
 ln -sf "$theme_dir"/gtk-4.0/assets/ "$gtk4_dir"/assets
 
-
 # GTK Flatpaks
-if pacman -Q flatpak &> /dev/null; then
+if pacman -Q flatpak &>/dev/null; then
     flatpak override --user --filesystem=~/.themes
     flatpak override --user --filesystem=~/.icons
     flatpak override --user --filesystem=xdg-config/gtk-4.0
